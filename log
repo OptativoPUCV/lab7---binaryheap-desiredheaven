@@ -26,3 +26,21 @@ Thu 28 Sep 2023 07:15:30 PM UTC:
  tests:  2|2
 total_score: 20/70
 df74501
+Thu 28 Sep 2023 07:25:48 PM UTC: 
+ heap.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:40:57: error: expected expression before ‘<’ token
+   40 |   while (pos > 0  && pq->heapArray[(pos-1)/2].priority) < priority)
+      |                                                         ^
+heap.c:40:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   40 |   while (pos > 0  && pq->heapArray[(pos-1)/2].priority) < priority)
+      |   ^~~~~
+heap.c:40:67: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   40 |   while (pos > 0  && pq->heapArray[(pos-1)/2].priority) < priority)
+      |                                                                   ^
+heap.c:40:67: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+4f3e404
