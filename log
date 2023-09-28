@@ -62,3 +62,9 @@ heap.c:64:77: error: ‘posizqz’ undeclared (first use in this function); did 
 heap.c:64:77: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 05383bf
+Thu 28 Sep 2023 07:41:13 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+1b5a631
