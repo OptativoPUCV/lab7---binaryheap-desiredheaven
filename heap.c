@@ -45,13 +45,38 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[pos].priority = priority;
   pq->heapArray[pos].data = data;
   pq->size++;
-
-  
   
 }
 
 
 void heap_pop(Heap* pq){
+
+  pq->size--;
+  pq->heapArray[0] = pq->heapArray[pq->size];
+
+  int pos = 0;
+  int posizq = 1;
+  int posder = 2;
+
+  while (posizq < pq->size)
+    {
+      int hijo = posizq;
+      if (posder < pq->size && pq->heapArray[posder].priority>pq->heapArray[posizqz].priority)
+      {
+        hijo = posder;
+      }
+      if (pq->heapArray[pos].priority>=pq->heapArray[hijo].priority)
+      {
+        break;
+      }
+      heapElem aux = pq->heapArray[pos];
+      pq->heapArray[pos] = pq->heapArray[hijo];
+      pq->heapArray[hijo] = aux;
+      pos = hijo;
+      posizq = posizq *2+1;
+      posder = posder *2+2;
+    }
+  
 
 }
 
