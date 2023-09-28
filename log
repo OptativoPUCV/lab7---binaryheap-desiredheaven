@@ -2,3 +2,15 @@ Thu 28 Sep 2023 06:59:20 PM UTC:
  tests:  0|4
 total_score: 0/70
 54a6365
+Thu 28 Sep 2023 07:10:54 PM UTC: 
+ heap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:39:3: error: ‘heap’ undeclared (first use in this function); did you mean ‘Heap’?
+   39 |   heap->size = 0;
+      |   ^~~~
+      |   Heap
+heap.c:39:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+93563e9
